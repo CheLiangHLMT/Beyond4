@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stock Alert Bot</title>
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "stock_alert_bot.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+	<img class="wave" src="image/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="image/shopping.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="image/profilepic.svg">
+				<h2 class="title">Stock Alert Bot</h2>
+           		
+				   
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fa fa-user-circle"></i>
+           		   </div>
+           		   <div class="div">
+           		    	
+           		    	<input type="text" id="url" name="url_link" placeholder="Insert URL Here">
+            	   </div>
+            	</div>
+
+
+				
+					
+				<!-- <nav>
+					<div class="dropdown">
+
+						<div class="projects">
+						  <button>Scan Duration</button>
+						  <ul>
+							<li><a href="#">1 day</a></li>
+							<li><a href="#">1 month</a></li>
+							<li><a href="#">1 year</a></li>
+							
+						  </ul>
+						</div>
+					</div>
+				</nav> -->
+
+                <!-- <div class="input-div pass">
+                    <div class="i">
+                            <i class="fa fa-clock"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Scan Duration</h5>
+                            <input type="text" class="input">
+                    </div>
+                 </div> -->
+				 
+				 <!-- <form action="server.py">
+					 <input type = "submit" class="btn" value="Go"> 
+					 
+				 </form> -->
+				 
+				 <form action="thankyou.html">
+<!-- 				
+				 <input type="submit" class="btn" value="Go" onclick="location.href='../server.py';" /> -->
+				 
+				</form>
+				<div>
+				<input type="submit" class="btn" value="Go" onclick="location.href='thankyou.html';" />
+				</div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

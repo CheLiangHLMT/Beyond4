@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stock Alert Bot</title>
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "stock_alert_bot.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+	<img class="wave" src="image/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="image/shopping.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<h2 class="title">Thank You for using our Bot!</h2>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
